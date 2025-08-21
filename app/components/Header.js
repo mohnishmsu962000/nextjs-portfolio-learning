@@ -9,7 +9,7 @@ function Header() {
             <div className='flex space-x-6'> 
             <Link href="/"  className='text-gray-600 hover:text-gray-800'>Home</Link>
             <Link href="/about" className='text-gray-600 hover:text-gray-800'>About</Link> 
-            <Link href="/proejcts" className='text-gray-600 hover:text-gray-800'>Projects</Link>
+            <Link href="/projects" className='text-gray-600 hover:text-gray-800'>Projects</Link>
             <Link href="/contact" className='text-gray-600 hover:text-gray-800'>Contact</Link>
             </div>
         </div>
