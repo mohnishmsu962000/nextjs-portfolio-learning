@@ -1,7 +1,8 @@
 import React from 'react'
 import { projects } from '../../../data/projects'
 
-function ProjectDetail({ params }) {
+
+function ProjectDetail( { params }: { params: { slug: string } } ) {
 
     const clickedProject = projects.find(p => p.slug === params.slug)
 

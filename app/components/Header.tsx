@@ -12,7 +12,7 @@ function Header() {
   return (
     <nav className='bg-white shadow-md'> 
         <div className='hidden justify-between items-center px-8 py-4 md:flex'> 
-            <div className='text-xl font-bold text-gray-900'> Mohnish. </div>
+            <Link href="/" className='text-xl font-bold text-gray-900'> Mohnish. </Link>
             <div className='flex space-x-6'> 
             <Link href="/"  className='text-gray-600 hover:text-gray-800'>Home</Link>
             <Link href="/about" className='text-gray-600 hover:text-gray-800'>About</Link> 
@@ -21,7 +21,7 @@ function Header() {
             </div>
         </div>
         <div className='flex justify-between items-center px-8 py-4 md:hidden'>
-            <div className='text-xl font-bold text-gray-900'> Mohnish. </div>
+            <Link href="/" className='text-xl font-bold text-gray-900'> Mohnish. </Link>
             <button className='text-2xl text-gray-600 hover:text-gray-800' onClick={handleExpand}>
             {menu ? '✕' : '☰'}
             </button>
