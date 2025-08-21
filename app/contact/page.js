@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactForm from '../components/ContactForm'
 
 function Contact() {
   return (
@@ -34,13 +35,11 @@ function Contact() {
             
             <div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Quick Message</h3>
-              <p className="text-gray-600 mb-4">Contact form coming soon!</p>
-              <div className="bg-gray-100 p-4 rounded">
-                <p className="text-sm text-gray-500">
-                  For now, feel free to reach out via email or LinkedIn. 
-                  I'll be adding a contact form in future updates.
-                </p>
+              <p className="text-gray-600 mb-4">Please fill out the form below!</p>
+              <div className="bg-gray-100 p-4 rounded-2xl">
+                <ContactForm />
               </div>
+              
             </div>
           </div>
         </div>
