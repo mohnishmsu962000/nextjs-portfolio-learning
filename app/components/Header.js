@@ -29,10 +29,10 @@ function Header() {
         </div>
         <div>{menu && 
                 <div className='flex flex-col space-y-4 px-8 py-4 bg-white border-t'> 
-            <Link href="/"  className='text-gray-600 hover:text-gray-800 py-2'>Home</Link>
-            <Link href="/about" className='text-gray-600 hover:text-gray-800 py-2'>About</Link> 
-            <Link href="/projects" className='text-gray-600 hover:text-gray-800 py-2'>Projects</Link>
-            <Link href="/contact" className='text-gray-600 hover:text-gray-800 py-2'>Contact</Link>
+            <Link href="/"  className='text-gray-600 hover:text-gray-800 py-2' onClick={() => setMenu(false)}>Home</Link>
+            <Link href="/about" className='text-gray-600 hover:text-gray-800 py-2' onClick={() => setMenu(false)}>About</Link> 
+            <Link href="/projects" className='text-gray-600 hover:text-gray-800 py-2' onClick={() => setMenu(false)}>Projects</Link>
+            <Link href="/contact" className='text-gray-600 hover:text-gray-800 py-2' onClick={() => setMenu(false)}>Contact</Link>
             </div>
                 }</div>
     </nav>
