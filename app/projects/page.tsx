@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 function Projects() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-white pt-6">
   {projects.map((project) => (
-    <div key={project.slug} className="bg-white rounded-lg shadow-md p-6">
+    <div key={project.slug} className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
       <h3 className="text-xl font-bold text-gray-800 mb-3">{project.name}</h3>
       <p className="text-gray-600 mb-4">{project.description}</p>
       

@@ -7,6 +7,12 @@ interface ContactFormData{
     message?: string
 }
 
+interface FormErrors {
+  name: string,
+  email: string,
+  message: string
+}
+
 function ContactForm() {
 
     const [formData, setFormData] = useState<ContactFormData>({
@@ -16,6 +22,12 @@ function ContactForm() {
     })
 
     const [success, setSuccess] = useState(false)
+
+    const [error, setError] = useState<FormErrors>({
+        name: '',
+        email: '',
+        message: ''
+    })
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>){
 
@@ -43,7 +55,15 @@ function ContactForm() {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({
                 ...formData, name: e.target.value
             })}
+            onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
+                if (!e.target.value) {
+                    setError({...error, name: "Name Can't be empty"})
+                }else {
+                    setError({...error, name: ""})
+                }
+            }}
             />
+            {error.name && <p className="text-red-500 text-sm">{error.name}</p>}
             <input 
             className='w-full border border-black text-gray-900 focus:ring-2 rounded-md pl-3 pr-3 pt-2 pb-2'
             type='email' 
@@ -52,7 +72,15 @@ function ContactForm() {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({
                 ...formData, email: e.target.value
             })}
+            onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
+                if (!e.target.value.includes('@') || !e.target.value.includes('.')) {
+                    setError({...error, email: "Please include @ and a ."})
+                } else {
+                    setError({...error, email: ""})
+                }
+            }}
             />
+            {error.email && <p className="text-red-500 text-sm">{error.email}</p>}
             <textarea 
             className='w-full border border-black text-gray-900 focus:ring-2 rounded-md pl-3 pr-3 pt-2 pb-2'
             placeholder='Enter Custom Message'

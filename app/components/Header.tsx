@@ -10,7 +10,7 @@ function Header() {
         setMenu(!menu)
     }
   return (
-    <nav className='bg-white shadow-md'> 
+    <nav className='bg-white shadow-md border border-b-2'> 
         <div className='hidden justify-between items-center px-8 py-4 md:flex'> 
             <Link href="/" className='text-xl font-bold text-gray-900'> Mohnish. </Link>
             <div className='flex space-x-6'> 
